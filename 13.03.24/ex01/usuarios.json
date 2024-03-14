@@ -1,0 +1,9 @@
+{
+    "usuarios": [
+        {"nome": "Kanye West", "idade": 46},
+        {"nome": "Dunga", "idade": 58},
+        {"nome": "Neto Berola", "idade": 36},
+        {"nome": "Mc Bin Laden", "idade": 24},
+        {"nome": "Michael Jordan", "idade": 61}
+    ]
+}
