@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Informações dos Estudantes</title>
+</head>
+<body>
+    <h1>Estudantes</h1>
+    <p>O que você deseja visualizar?</p>
+    <form>
+        <select id="escolha" name="escolha">
+            <option value="selecione">Selecione</option>
+            <option value="todos">Todos os estudantes</option>
+            <option value="homens">Estudantes homens</option>
+            <option value="mulheres">Estudantes mulheres</option>
+            <option value="aprovados">Estudantes aprovados</option>
+            <option value="reprovados">Estudantes reprovados</option>
+            <option value="aprovados_todos">Todos os alunos aprovados</option>
+            <option value="media">Nota média da turma</option>
+        </select>
+    </form>
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
