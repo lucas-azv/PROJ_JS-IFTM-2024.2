@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     const selectElement = document.getElementById('escolha');
     const resultadoElement = document.getElementById('resultado');
 
-    selectElement.addEventListener('change', function() {
+    selectElement.addEventListener('change', () => {
         const escolha = selectElement.value;
         switch (escolha) {
             case 'todos':
@@ -38,14 +38,14 @@ window.addEventListener('load', () => {
         }
     });
 
-    function mostrarTodos(alunos) {
+    const mostrarTodos = (alunos) => {
         resultadoElement.innerHTML = '';
         alunos.forEach(aluno => {
             resultadoElement.innerHTML += `<p>Nome: ${aluno.nome}, Nota Bim 1: ${aluno.notaBim1}, Nota Bim 2: ${aluno.notaBim2}, Sexo: ${aluno.sexo}</p>`;
         });
     }
 
-    function mostrarPorSexo(alunos, sexo) {
+    const mostrarPorSexo = (alunos, sexo) => {
         resultadoElement.innerHTML = '';
         const filteredAlunos = alunos.filter(aluno => aluno.sexo === sexo);
         filteredAlunos.forEach(aluno => {
@@ -53,7 +53,7 @@ window.addEventListener('load', () => {
         });
     }
 
-    function mostrarAprovados(alunos) {
+    const mostrarAprovados = (alunos) => {
         resultadoElement.innerHTML = '';
         const aprovados = alunos.filter(aluno => aluno.notaBim1 + aluno.notaBim2 >= 60);
         aprovados.forEach(aluno => {
@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
         });
     }
 
-    function mostrarReprovados(alunos) {
+    const mostrarReprovados = (alunos) => {
         resultadoElement.innerHTML = '';
         const reprovados = alunos.filter(aluno => aluno.notaBim1 + aluno.notaBim2 < 60);
         reprovados.forEach(aluno => {
@@ -69,12 +69,12 @@ window.addEventListener('load', () => {
         });
     }
 
-    function mostrarTodosAprovados(alunos) {
+    const mostrarTodosAprovados = (alunos) => {
         const todosAprovados = alunos.every(aluno => (aluno.notaBim1 + aluno.notaBim2) / 2 >= 60);
         resultadoElement.innerHTML = `<p>Todos aprovados: ${todosAprovados}</p>`;
     }
 
-    function mostrarMediaTurma(alunos) {
+    const mostrarMediaTurma = (alunos) => {
         const media = alunos.reduce((acc, aluno) => acc + aluno.notaBim1 + aluno.notaBim2, 0) / alunos.length;
         resultadoElement.innerHTML = `<p>Média da Turma: ${media}</p>`;
     }
