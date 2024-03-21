@@ -1,0 +1,13 @@
+#box-filmes {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+#box-filmes div {
+    border: 1px solid black;
+    padding: 12px;
+}
