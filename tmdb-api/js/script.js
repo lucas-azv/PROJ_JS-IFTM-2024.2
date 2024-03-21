@@ -20,10 +20,12 @@ window.addEventListener('load', () => {
             var tituloFilme = document.createElement("p");
             var poster = document.createElement("img");
             var url = "https://image.tmdb.org/t/p/w500";
-            poster.setAttribute("src",`${url}${filme.backdrop_path}`);
+            poster.setAttribute("src", `${url}${filme.poster_path}`);
+
             tituloFilme.textContent = filme.original_title;
             boxFilme.appendChild(tituloFilme);
             document.getElementById("box-filmes").appendChild(boxFilme);
+            boxFilme.appendChild(poster);
         });
     }
 })
