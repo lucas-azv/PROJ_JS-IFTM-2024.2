@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
             poster.setAttribute("src", `${url}${filme.poster_path}`);
 
             tituloFilme.textContent = filme.original_title;
-            nota.textContent = (`⭐${filme.vote_average}`);
+            nota.textContent = (`⭐${filme.vote_average.toFixed(1)}`);
 
             boxFilme.appendChild(poster);
             boxFilme.appendChild(tituloFilme);
