@@ -15,17 +15,26 @@ window.addEventListener('load', () => {
         .catch(err => console.error(err));
 
     function exibir(filmes) {
-        filmes.forEach(filme => {
+        filmes.slice(0,10).forEach(filme => {
             var boxFilme = document.createElement("div");
             var tituloFilme = document.createElement("p");
             var poster = document.createElement("img");
+            var nota = document.createElement("p")
             var url = "https://image.tmdb.org/t/p/w500";
+
+            tituloFilme.id = "tituloFilme"
+
             poster.setAttribute("src", `${url}${filme.poster_path}`);
 
             tituloFilme.textContent = filme.original_title;
-            boxFilme.appendChild(tituloFilme);
-            document.getElementById("box-filmes").appendChild(boxFilme);
+            nota.textContent = (`⭐${filme.vote_average}`);
+
             boxFilme.appendChild(poster);
+            boxFilme.appendChild(tituloFilme);
+            boxFilme.appendChild(nota);
+
+            
+            document.getElementById("box-filmes").appendChild(boxFilme);
         });
     }
 })
