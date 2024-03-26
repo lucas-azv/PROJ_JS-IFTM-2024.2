@@ -9,6 +9,7 @@
 body{
     background-color: #0d253f;
     font-family: 'roboto mono';
+    padding: 36px 0 0 0;
 }
 
 #box-header{
@@ -18,37 +19,68 @@ body{
 }
 
 #box-header img{
-    width: 246px;
-    padding: 36px;
+    width: 186px;
+    margin-bottom: 36px;
 }
 
 #box-filmes {
-    width: 90%;
+    width: 70%;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 14px;
+    gap: 24px;
 }
 
-#box-filmes div {
+#box-filme{
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    border: 1px solid black;
-    padding: 18px 24px;
-    width: 18,5%;
-    justify-content: center;
+    flex-direction: row;
+    border-radius: 24px;
+    overflow: hidden;
     color: white;
+    background-color: #0d1e31;
+    transition: all 0.2s ease-in-out;
+}
+
+#box-filme:hover{
+    transform: scale(1.05);
+    background-color: #082c52;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#box-filmes p{
+    padding: 8px 12px;
+    width: 100%;
 }
 
 #tituloFilme{
-    font-size: 18px;
     font-weight: 600;
     color: #90cea1;
+    font-size: 28px;
+}
+
+#nota{
+    font-weight: 700;
+    color: #f9f871;
+    font-size: 18px;
+
 }
 
 img{
     width: 286px;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 12px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 36px;
+    font-size: 12px;
 }
