@@ -74,8 +74,14 @@ img{
 #info{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 14px;
     padding: 8px 12px;
+}
+
+#box-generos {
+    color: #cccccc;
+    font-weight: 700;
+    margin-top: auto;
 }
 
 footer{
