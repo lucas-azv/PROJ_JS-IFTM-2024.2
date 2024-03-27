@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
     )
         .then((response) => response.json())
         .then((filmes) => {
-            fetch(`https://api.themoviedb.org/3/genre/movie/list?${language}`, options)
+            fetch(`https://api.themoviedb.org/3/genre/movie/list?language=${language}`, options)
                 .then((response) => response.json())
                 .then((genres) => {
                     filmes.results.slice(0, 10).forEach((filme) => {
@@ -33,6 +33,8 @@ window.addEventListener("load", () => {
                         var nota = document.createElement("p");
                         var sinopse = document.createElement("p");
 
+                        sinopse.id = "sinopse";
+
                         var url = "https://image.tmdb.org/t/p/w500";
 
                         var info = document.createElement("div");
@@ -47,7 +49,6 @@ window.addEventListener("load", () => {
                         nota.textContent = `⭐ ${filme.vote_average.toFixed(1)}`;
                         sinopse.textContent = filme.overview;
 
-                        // Encontrar os gêneros do filme e exibir
                         var filmeGenres = filme.genre_ids.map(genreId => genres.genres.find(genre => genre.id === genreId).name).join(", ");
                         var generos = document.createElement("p");
                         generos.textContent = filmeGenres;
