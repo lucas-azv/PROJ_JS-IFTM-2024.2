@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+}
+.formulario{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.submit-btn{
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+}
+.input-campo{
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(190, 190, 190);
+    transition: all ease-in-out 0.1s;
+}
+.input-campo:focus{
+    background-color: rgb(234, 234, 234);
+    border: 1px solid rgb(123, 123, 123);
+}
